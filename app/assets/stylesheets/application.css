@@ -14,12 +14,94 @@
  *= require_self
  */
 
- .article-index-photo {
-   width:auto;
-   text-align: center;
-   display: inline;
-   justify-content: center;
- }
-body {
+
+.navbar {
+  width: auto;
+  height: 80px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-color: red;
+  align-items: center;
+  justify-content: space-around;
+
+}
+.nav-content {
+background-color: yellow;
+padding-right: 20px;
+width: 100px;
+text-align: center;
+}
+
+.logo-img{
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+  text-align: center;
+
+}
+
+.article-index-container{
+  display: flex;
+  text-align: center;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  justify-content: center;
+
+
+}
+
+.article-index-photo {
+  width: 400px;
+}
+
+.article-index-photo-P {
+  padding: 20px;
+}
+.article-title {
   text-align: center;
 }
+
+.submit-story {
+  text-align: center;
+}
+
+.article-show-title {
+  text-align: center;
+}
+.article-show-p {
+  text-align: center;
+}
+.article-show-time {
+  text-align: left;
+}
+.article-show-edit {
+  text-align: center;
+}
+.article-show-comment {
+text-align: center;
+}
+.article-show-write-comment {
+  text-align: center;
+}
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  flex-wrap: wrap;
+  }
+
+}
+.left-column {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    width: 100px;
+  }
+.right-column {
+  display: flex;
+  flex-direction: column;
+  }
+
+/*views for article above*/

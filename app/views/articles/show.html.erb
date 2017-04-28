@@ -1,21 +1,13 @@
 
-<h1><%= @article.title %> </h2>
-<p><%= @article.body%></p>
-<p><%= @article.created_at%></p>
-<h3><%= link_to "Edit Article", edit_article_path(@article) %></h3>
+<h1 class="article-show-title"><%= @article.title %> </h2>
+<p class="article-show-p"><%= @article.body%></p>
+<p class="article-show-time"><%= @article.created_at%></p>
+<%= image_tag @article.photo_url, class: "article-show-photo" %>
+<h3 class="article-show-edit"><%= link_to "Edit Article", edit_article_path(@article) %></h3>
 
+<h1 class="article-show-comment">comments</h1>
 
-<%= image_tag @article.photo_url, class: "article-photo" %>
-
-
-
-<h1>comments</h1>
-  <ul>
-  <% @article.comments.each do |comment| %>
-      <h2><%= link_to "#{comment.body}", article_comment_path(@article, comment)%></h2>
-
-    <h3><%=comment.author_name%></h3>
-
+    <% @article.comments.each do |comment| %>
+        <p><%= link_to "#{comment.body}", article_comment_path(@article, comment)%></p><br>
     <% end %>
-</ul>
-<h3><%= link_to "Write a comment", new_article_comment_path(@article) %></h3>
+  <h3 class="article-show-write-comment"><%= link_to "Write a comment", new_article_comment_path(@article) %></h3>

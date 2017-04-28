@@ -9,6 +9,15 @@
   </head>
 
   <body>
+    <div class="logo-img">
+      <img src="https://petrolicious.com/wp-content/themes/petrolicious/images/logo.svg">
+    </div>
+
+    <nav class="navbar">
+              <a class ="nav-content" <%= link_to "Cars for slae", cars_path%></a>
+              <a class ="nav-content" <%= link_to "Article", articles_path%></a>
+              <a class ="nav-content" <%= link_to "Gallery"%></a>
+    </nav>
     <%= yield %>
   </body>
 </html>
