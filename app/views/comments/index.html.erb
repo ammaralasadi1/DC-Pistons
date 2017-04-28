@@ -1,0 +1,9 @@
+<h2>Comments</h2>
+<h2><%= link_to "(+)", new_article_comment_path %></h2>
+
+
+  <% @comments.each do |comment| %>
+
+      <h2><<%=comment.body%></h2>
+      <h2></h2>
+  <% end %>

@@ -1,0 +1,12 @@
+<h2>Article</h2>
+<%= link_to "Submit your story", new_article_path %>
+
+
+  <% @articles.each do |article| %>
+    <div class="article-index-photo">
+        <%= image_tag article.photo_url, class: "article-photo" %>
+    </div>
+  <div class="article-index-title">
+        <%= link_to article.title, article %>
+  </div>
+  <% end %>

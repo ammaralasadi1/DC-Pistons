@@ -1,0 +1,11 @@
+<h2>Share you story</h2>
+
+<%= form_for [@article, @comment] do |f| %>
+  <%= f.label :body %>
+  <%= f.text_field :body %>
+
+  <%= f.label :author_name %>
+  <%= f.text_field :author_name %>
+
+  <%= f.submit %>
+<% end %>
