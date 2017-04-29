@@ -1,18 +1,4 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+
 body {
   background-color: #F2F4F2;
 }
@@ -25,21 +11,19 @@ body {
 }
 
 .article-index-photo {
-  height: 300px;
-  width: 300px;
+    width: 400px;
 
 }
 
 .article-index-photo:hover {
-  width: 400px;
-  height: 400px;
+  width: 410px;
+
 }
 .navbar {
   width: 80%px;
   height: 90px;
   display: flex;
   justify-content: center;
-  background-color: #A6A8A6;
   align-items: center;
   justify-content: space-around;*/
 
@@ -59,6 +43,7 @@ body {
   flex-wrap: wrap;
   margin: 0 auto;
   justify-content: center;
+  height: 500px;
 
 
 }
@@ -69,6 +54,7 @@ body {
 
 .article-index-photo-P {
   padding: 20px;
+  height: 600px;
 }
  .title {
   text-align: center;
@@ -86,9 +72,16 @@ body {
 }
 .article-show-p {
   text-align: center;
+    width: 45%;
+    font-family: "Lato";
+    letter-spacing: .02em;
+    color: #392f2c;
+    font-size: 1.5em;
+    text-align: justify;
+
 }
-.article-show-time {
-  text-align: left;
+.article-show-time, .by {
+  text-align: center;
 }
 .article-show-edit {
   text-align: center;
@@ -113,8 +106,11 @@ text-align: center;
     width: 100%;
     padding: 10px;
   }
-
-  .form-row input[type=submit], .back {
+  .text_area {
+    width: 100%;
+    height: 100px;
+  }
+  .form-row input[type=submit], .back, .article-show-edit , .article-show-write-comment {
     color: #fff;
     background-color: #337ab7;
     border-color: #2e6da4;
@@ -164,4 +160,104 @@ form {
   background-color: #2098D1;
   color: white;
 }
+
+
+
+
+  a:link {
+      text-decoration: none;
+      color: #392e2c;
+      color: inherit;
+  }
+  .article-index-p {
+    font-size: 20px;
+      font-weight: normal;
+      line-height: 24px;
+      letter-spacing: -0.02em;
+      text-decoration: none;
+    width: 400px;
+    height: 50px;
+    font-weight: 100;
+  }
+
+  .article-show-photo {
+    width: 50%;
+    height: 50%;
+    margin: 0 auto;
+    -webkit-box-shadow: 3px -1px 23px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 3px -1px 23px 0px rgba(0,0,0,0.75);
+box-shadow: 3px -1px 23px 0px rgba(0,0,0,0.75);
+margin-top: 50px;
+
+  }
+
+  .show-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.submit-story {
+  background-color: #337ab7;
+  border-color: #2e6da4;
+  margin: 0a auto;
+  width: 60%;
+}
+.article-show-edit, .article-show-write-comment {
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+.cars-index {
+  width: 80%;
+  margin: 0 auto;
+  font-size: 2em;
+}
+
+th, td {
+width:20px;
+text-align: center;
+border-collapse: collapse;
+}
+
+.article-phot {
+  display: flex;
+
+}
+
+.car-show {
+  text-align: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+
+.for-sale {
+  width: 70%;
+  height: 70%;
+}
+
+.ad{
+  width: 70%;
+  margin: 0 auto;
+  text-align: justify;
+}
+
+
+.ad-title {
+  font-family: 'Nunito', sans-serif;
+    max-width: 600px;
+    color: #525349;
+    line-height: 1.5;
+    letter-spacing: .04em;
+    padding: 0 20px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    font-size: 2em;
+}
+
+
+
 /*views for article above*/

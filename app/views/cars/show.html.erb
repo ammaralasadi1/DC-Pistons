@@ -1,51 +1,50 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Title:</strong>
-  <%= @car.title %>
+
+<div class="car-show">
+
+
+<p class="ad-title">
+<%= @car.title %>
+</p>
+
+<p class="ad">
+<%= @car.body%>
 </p>
 
 <p>
-  <strong>Body:</strong>
-  <%= @car.body %>
+<%= @car.make %>
 </p>
 
 <p>
-  <strong>Make:</strong>
-  <%= @car.make %>
+<%= @car.model %>
 </p>
 
 <p>
-  <strong>Model:</strong>
-  <%= @car.model %>
-</p>
-
-<p>
-  <strong>Year:</strong>
   <%= @car.year %>
 </p>
 
 <p>
-  <strong>Price:</strong>
-  <%= @car.price %>
+<%= @car.price %>
 </p>
 
 <p>
-  <strong>Seller name:</strong>
-  <%= @car.seller_name %>
+<%= @car.seller_name %>
 </p>
 
 <p>
-  <strong>Seller phone:</strong>
-  <%= @car.seller_phone %>
+<%= @car.seller_phone %>
 </p>
 
-<p>
 
 
-  <%= image_tag @car.photo_url, class:"for_sale"%>
+<div class="car-show-phot">
+  <%= image_tag @car.photo_url, class:"for-sale"%>
+</div>
 
-</p>
-
+<div>
 <%= link_to 'Edit', edit_car_path(@car) %> |
 <%= link_to 'Back', cars_path %>
+</div>
+
+</div>

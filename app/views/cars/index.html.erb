@@ -2,11 +2,10 @@
 
 <h1 class="title">For Sale</h1>
 
-<table>
+<table class= "cars-index">
   <thead>
     <tr>
       <th>Title</th>
-      <th>About</th>
       <th>Make</th>
       <th>Model</th>
       <th>Year</th>
@@ -22,7 +21,6 @@
     <% @cars.each do |car| %>
       <tr>
         <td><%= car.title %></td>
-        <td><%= car.body %></td>
         <td><%= car.make %></td>
         <td><%= car.model %></td>
         <td><%= car.year %></td>
