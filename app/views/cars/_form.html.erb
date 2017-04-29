@@ -1,54 +1,54 @@
-<div>
+<div class="form-wrapper">
 <%= form_for(car) do |f| %>
 
-  <div class="field">
+  <div class="form-row">
     <%= f.label :title, class:"label" %>
     <%= f.text_field :title %>
   </div>
 
-  <div class="field">
+  <div class="form-row">
     <%= f.label :body, class:"label" %>
     <%= f.text_field :body %>
   </div>
 
-  <div class="field">
+  <div class="form-row">
   <%= f.label :make, class:"label" %>
   <%= f.text_field :make %>
   </div>
 
-  <div class="field">
+  <div class="form-row">
     <%= f.label :model,class:"label" %>
     <%= f.text_field :model %>
   </div>
 
-  <div class="field">
+  <div class="form-row">
     <%= f.label :year,class:"label" %>
     <%= f.number_field :year %>
   </div>
 
-  <div class="field">
+  <div class="form-row">
     <%= f.label :price, class:"label" %>
     <%= f.text_field :price %>
   </div>
 
-  <div class="field">
+  <div class="form-row">
     <%= f.label :seller_name, class:"label" %>
     <%= f.text_field :seller_name %>
   </div>
 
-  <div class="field">
+  <div class="form-row">
     <%= f.label :seller_phone, class:"label" %>
     <%= f.text_field :seller_phone %>
   </div>
 
-  <div class="field">
+  <div class="form-row">
     <%= f.label :photo_url, class:"label" %>
     <%= f.text_field :photo_url %>
   </div>
 
-  <div class="actions">
+  <div class="form-row">
     <%= f.submit %>
   </div>
-<% end %>
 
+<% end %>
 </div>
