@@ -1,17 +1,20 @@
 <h2>New Article</h2>
 
 <%= form_for @article do |f| %>
+<div class="left-column">
   <%= f.label :title %>
-  <%= f.text_field :title %>
-
   <%= f.label :body %>
-  <%= f.text_field :body %>
-
   <%= f.label :photo_url %>
-  <%= f.text_field :photo_url %>
-
   <%= f.label :author_name %>
+</div>
+<div class="right-column">
+  <%= f.text_field :title %>
+  <%= f.text_field :body %>
+  <%= f.text_field :photo_url %>
   <%= f.text_field :author_name %>
+</div>
 
+<div class="submit">
   <%= f.submit %>
+</div>
 <% end %>
