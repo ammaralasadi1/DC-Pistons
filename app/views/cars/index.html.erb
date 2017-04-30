@@ -1,40 +1,25 @@
 <p id="notice"><%= notice %></p>
 
 <h1 class="title">For Sale</h1>
+<div class="car-ad-wraper">
+<% @cars.each do |car| %>
 
-<table class= "cars-index">
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Make</th>
-      <th>Model</th>
-      <th>Year</th>
-      <th>Price</th>
-      <th>Name</th>
-      <th>Phone</th>
+<div class="car-ad-upper">
+  <div class= "car-ad-img"><%= image_tag car.photo_url%></div>
+  <h1 class="article-show-title"><%= car.title%></h1>
+</div>
 
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+<div class="car-ad-lower">
 
-  <tbody>
-    <% @cars.each do |car| %>
-      <tr>
-        <td><%= car.title %></td>
-        <td><%= car.make %></td>
-        <td><%= car.model %></td>
-        <td><%= car.year %></td>
-        <td><%= car.price %></td>
-        <td><%= car.seller_name %></td>
-        <td><%= car.seller_phone %></td>
+  <%= link_to 'Show', car, class:"nav-content hvr-fade" %>
+  <%= link_to 'Edit', edit_car_path(car), class: "nav-content hvr-fade" %>
+  <%= link_to 'Delete', car, method: :delete, data: { confirm: 'Are you sure?' }, class: "nav-content hvr-fade"%>
 
-        <td><%= link_to 'Show', car %></td>
-        <td><%= link_to 'Edit', edit_car_path(car) %></td>
-        <td><%= link_to 'Destroy', car, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+</div>
+
+<% end %>
+
+</div>
 
 <br>
 

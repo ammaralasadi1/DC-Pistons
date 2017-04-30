@@ -1,11 +1,26 @@
-<h2>Share you story</h2>
+<h2 class="title">Share you story</h2>
 
 <%= form_for [@article, @comment] do |f| %>
-  <%= f.label :body %>
-  <%= f.text_field :body %>
+<div class="form-wraper">
+  <div class="form-row">
 
-  <%= f.label :author_name %>
-  <%= f.text_field :author_name %>
+    <%= f.label :body %>
+    <%= f.text_field :body %>
 
-  <%= f.submit %>
-<% end %>
+  </div>
+
+  <div class="form-row">
+
+    <%= f.label :author_name %>
+    <%= f.text_field :author_name %>
+
+  </div>
+
+  <div class="form-row">
+
+    <%= f.submit %>
+    <% end %>
+
+  </div>
+
+</div>

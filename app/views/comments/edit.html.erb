@@ -1,16 +1,29 @@
 <h2>Edit comment</h2>
 
 <%= form_for [@article, @comment] do |f| %>
+<div class="form-wrapper">
+
+<div class="form-row">
   <%= f.label :body %>
   <%= f.text_field :body %>
+</div>
 
+<div class="form-row">
   <%= f.label :author_name %>
   <%= f.text_field :author_name %>
+</div>
 
 
-  <%= f.submit %>
+<div class="form-row">
+    <%= f.submit %>
+</div>
+
 <% end %>
+<div class="form-row">
+  <%= form_for [@article, @comment], method: :delete do |f| %>
+    <%= f.submit "Delete!", class: "delete" %>
 
-<%= form_for [@article, @comment], method: :delete do |f| %>
-  <%= f.submit "Delete!", class: "delete" %>
-<% end %>
+
+</div>
+  <% end %>
+</div>

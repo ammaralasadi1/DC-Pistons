@@ -1,37 +1,35 @@
-
 <h2 class="article-edit-title">Submit Your Story</h2>
 <div class="article-edit-container">
-<%= form_for @article do |f| %>
-<div class="form-wrapper">
+  <%= form_for @article do |f| %>
+  <div class="form-wrapper">
 
-  <div class="form-row">
-    <%= f.label :title, class:"label"%>
-    <%= f.text_field :title, class:"text_field"%>
-  </div>
+    <div class="form-row">
+      <%= f.label :title, class:"label"%>
+      <%= f.text_field :title, class:"text_field"%>
+    </div>
 
+    <div class="form-row">
+      <%= f.label :body,  class:"label"%>
+      <%= f.text_field :body, class:"text_field" %>
+    </div>
+
+    <div class="form-row">
+      <%= f.label :author_name, class:"label" %>
+      <%= f.text_field :author_name, class:"text_field" %>
+    </div>
+    <div class="form-row">
+      <%= f.label :photo_url, class:"label" %>
+      <%= f.text_field :photo_url, class:"text_field"%>
+    </div>
+    <div class="form-row">
+      <%= f.submit %>
+      <% end %>
       <div class="form-row">
-          <%= f.label :body,  class:"label"%>
-          <%= f.text_field :body, class:"text_field" %>
+        <%= form_for @article, method: :delete do |f|%>
+        <%= f.submit "Delete!", class: "delete" %>
       </div>
 
-        <div class="form-row">
-            <%= f.label :author_name, class:"label" %>
-            <%= f.text_field :author_name, class:"text_field" %>
-        </div>
-            <div class="form-row">
-              <%= f.label :photo_url, class:"label" %>
-              <%= f.text_field :photo_url, class:"text_field"%>
-            </div>
-        <div class="form-row">
-          <%= f.submit %>
-          <% end %>
-        <div class="form-row">
-          <%= form_for @article, method: :delete do |f|%>
-          <%= f.submit "Delete!", class: "delete" %>
-        </div>
+    </div>
 
-</div>
-
-
-<% end %>
-</div>
+    <% end %>
+  </div>

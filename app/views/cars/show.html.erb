@@ -7,6 +7,10 @@
 <p class="ad-title">
 <%= @car.title %>
 </p>
+<div class="car-show-phot">
+  <%= image_tag @car.photo_url, class:"for-sale"%>
+</div>
+
 
 <p class="ad">
 <%= @car.body%>
@@ -38,9 +42,7 @@
 
 
 
-<div class="car-show-phot">
-  <%= image_tag @car.photo_url, class:"for-sale"%>
-</div>
+
 
 <div>
 <%= link_to 'Edit', edit_car_path(@car) %> |
