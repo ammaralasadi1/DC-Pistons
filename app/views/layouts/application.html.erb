@@ -9,6 +9,9 @@
   </head>
 
   <body>
+
+    <p class="notice"><%= notice %></p>
+       <p class="alert"><%= alert %></p>
     <div class="logo-img">
       <img src="https://petrolicious.com/wp-content/themes/petrolicious/images/logo.svg">
     </div>
@@ -17,6 +20,14 @@
               <a class ="nav-content hvr-fade"  <%= link_to "Cars for slae", cars_path%></a>
               <a class ="nav-content hvr-fade"  <%= link_to "Articles", articles_path%></a>
               <a class ="nav-content hvr-fade" <%= link_to "Gallery"%></a>
+              <a class="nav-content hvr-fade" <%=  link_to "Sign Up", new_user_registration_path%></a>
+
+              <% if user_signed_in? %>
+              <a class="nav-content hvr-fade" <%=  link_to "Sign OUt", destroy_user_session_path, method: :delete%></a>
+
+                <%else%>
+                <a class="nav-content hvr-fade" <%=  link_to "Log In", new_user_session_path%></a>
+              <%end%>
     </nav>
     <hr>
     <%= yield %>
