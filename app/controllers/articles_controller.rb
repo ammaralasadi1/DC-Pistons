@@ -13,10 +13,15 @@ class ArticlesController < ApplicationController
 
   # create
   def create
-    @article = current_user.articles.create(article_params)
-    @article.category_id = params[:category_id]
-    redirect_to article_path(@article)
-  end
+  		@article = current_user.articles.build(article_params)
+  		@article.category_id = (params[:category_id])
+
+  		if @article.save
+  			redirect_to root_path
+  		else
+  			render 'new'
+  		end
+  	end
 
   #show
   def show
@@ -25,6 +30,7 @@ class ArticlesController < ApplicationController
 
   # edit
   def edit
+    @categories = Category.all.map {|c| [c.name, c.id]}
     @article = Article.find(params[:id])
   end
 
@@ -32,8 +38,11 @@ class ArticlesController < ApplicationController
   # update
   def update
     @article = Article.find(params[:id])
+    @article.category_id = (params[:category_id])
+
     if @article.user == current_user
       @article.update(article_params)
+
     else
       flash[:alert] = "Only the author of the article can Update"
     end
