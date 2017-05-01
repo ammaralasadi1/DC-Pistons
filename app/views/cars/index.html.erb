@@ -1,25 +1,25 @@
-<p id="notice"><%= notice %></p>
-
-<h1 class="title">For Sale</h1>
 <div class="car-ad-wraper">
-<% @cars.each do |car| %>
+  <h1 class="title">For Sale</h1>
 
-<div class="car-ad-upper">
-  <div class= "car-ad-img"><%= image_tag car.photo_url%></div>
-  <h1 class="article-show-title"><%= car.title%></h1>
+  <% @cars.each do |car| %>
+
+  <div class="car-ad-upper">
+    <div class="car-ad-img"><%= image_tag car.photo_url%></div>
+    <h1 class="article-show-title"><%= car.title%></h1>
+  </div>
+
+  <div class="car-ad-lower">
+
+    <%= link_to 'Show', car, class:"nav-content hvr-fade" %>
+
+  </div>
+
+  <% end %>
+
+  <div class="">
+
+    <% if current_user %>
+    <%= link_to 'New Car', new_car_path, class:"nav-content hvr-fade" %>
+    <% end %>
+  </div>
 </div>
-
-<div class="car-ad-lower">
-
-<%= link_to 'Show', car, class:"nav-content hvr-fade" %>
-
-</div>
-
-<% end %>
-
-</div>
-
-<br>
-<% if current_user %>
-  <%= link_to 'New Car', new_car_path %>
-<% end %>

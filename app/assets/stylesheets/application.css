@@ -267,6 +267,8 @@ th, td {
 .car-ad-wraper {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .car-ad-upper {

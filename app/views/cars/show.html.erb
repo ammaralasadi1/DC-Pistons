@@ -46,11 +46,11 @@
 
 <div>
 <%if @car.user == current_user && user_signed_in?%>
-<%= link_to 'Delete', @car, method: :delete, data: { confirm: 'Are you sure?' }, class: "nav-content hvr-fade"%>
-<%= link_to 'Edit', edit_car_path(@car) %> |
+<%= link_to 'Delete', @car, method: :delete, data: { confirm: 'Are you sure?' }, class: "nav-content hvr-fade"%> |
+<%= link_to 'Edit', edit_car_path(@car), class: "nav-content hvr-fade" %> |
 <%  end %>
 
-<%= link_to 'Back', cars_path %>
+<%= link_to 'Back', cars_path, class:"nav-content hvr-fade" %>
 
 </div>
 
