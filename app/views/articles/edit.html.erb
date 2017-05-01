@@ -1,6 +1,6 @@
 <h2 class="article-edit-title">Submit Your Story</h2>
 <div class="article-edit-container">
-  <%= form_for @article do |f| %>
+  <%= form_for @article, :html => {:multipart => true} do |f| %>
   <div class="form-wrapper">
 
     <div class="form-row">
@@ -30,7 +30,7 @@
       </div>
 
       <div class="form-row">
-      <%= select_tag(:category_id, options_for_select(@categories), :prompt => "Select a category") %>
+      <%= f.select :category_id, @categories%>
       </div>
 
     </div>
