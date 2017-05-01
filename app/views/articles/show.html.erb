@@ -3,7 +3,8 @@
   </h2>
 
   <p class="by">By:<%=@article.author_name%></p>
-  <p class="article-show-time"><%= @article.created_at%></p>
+  <p class="by">Category :<%=@article.category.name%></p>
+  <p class="article-show-time"><%=@article.created_at%></p>
 
   <div class="article-phot">
 

@@ -1,21 +1,32 @@
 class ArticlesController < ApplicationController
   # index
   def index
+    if params[:category].blank?
     @articles = Article.all
+  else
+    category_id = Category.find_by(name: params[:category]).id
+    @articles = Article.where(:category_id => category_id).order("created_at DESC")
+  end
   end
 
   # new
   def new
     @article = current_user.articles.create
+    @categories = Category.all.map {|c| [c.name, c.id]}
 
   end
 
   # create
   def create
-    @article = current_user.articles.create!(article_params)
+  		@article = current_user.articles.build(article_params)
+  		@article.category_id = (params[:category_id])
 
-    redirect_to article_path(@article)
-  end
+  		if @article.save
+  			redirect_to root_path
+  		else
+  			render 'new'
+  		end
+  	end
 
   #show
   def show
@@ -24,6 +35,7 @@ class ArticlesController < ApplicationController
 
   # edit
   def edit
+    @categories = Category.all.map {|c| [c.name, c.id]}
     @article = Article.find(params[:id])
   end
 
@@ -31,8 +43,11 @@ class ArticlesController < ApplicationController
   # update
   def update
     @article = Article.find(params[:id])
+    @article.category_id = (params[:category_id])
+
     if @article.user == current_user
       @article.update(article_params)
+
     else
       flash[:alert] = "Only the author of the article can Update"
     end
@@ -55,6 +70,6 @@ class ArticlesController < ApplicationController
 
   private
   def article_params
-    params.require(:article).permit(:title, :body, :photo_url, :author_name)
+    params.require(:article).permit(:title, :body, :photo_url, :author_name, :category_id)
   end
 end

@@ -1,6 +1,6 @@
 <h2 class="article-edit-title">Submit Your Story</h2>
 <div class="article-edit-container">
-  <%= form_for @article do |f| %>
+  <%= form_for @article, :html => {:multipart => true} do |f| %>
   <div class="form-wrapper">
 
     <div class="form-row">
@@ -27,6 +27,10 @@
       <div class="form-row">
         <%= form_for @article, method: :delete do |f|%>
         <%= f.submit "Delete!", class: "delete" %>
+      </div>
+
+      <div class="form-row">
+      <%= f.select :category_id, @categories%>
       </div>
 
     </div>
