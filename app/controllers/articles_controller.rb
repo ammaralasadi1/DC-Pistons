@@ -7,13 +7,14 @@ class ArticlesController < ApplicationController
   # new
   def new
     @article = current_user.articles.create
+    @categories = Category.all.map {|c| [c.name, c.id]}
 
   end
 
   # create
   def create
-    @article = current_user.articles.create!(article_params)
-
+    @article = current_user.articles.create(article_params)
+    @article.category_id = params[:category_id]
     redirect_to article_path(@article)
   end
 
@@ -55,6 +56,6 @@ class ArticlesController < ApplicationController
 
   private
   def article_params
-    params.require(:article).permit(:title, :body, :photo_url, :author_name)
+    params.require(:article).permit(:title, :body, :photo_url, :author_name, :category_id)
   end
 end
