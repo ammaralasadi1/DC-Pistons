@@ -5,6 +5,7 @@ class CreateArticles < ActiveRecord::Migration[5.0]
       t.string :body
       t.string :author_name
       t.string :photo_url
+      t.references :user
 
       t.timestamps
     end

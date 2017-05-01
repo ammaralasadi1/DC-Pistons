@@ -1,14 +1,18 @@
 Article.destroy_all
 Comment.destroy_all
 Car.destroy_all
+User.destroy_all
 
-art_zero = Article.create(title: "petrol", body: "Loremhhhhdhdhsdahadhasdhasdhdhsadsadsadsad", author_name: "Alex Mandels", photo_url: "https://goo.gl/uDZhbj")
+User.create(email:"alasadiammar@gmail.com", password: "test123")
+User.create(email:"alasadi.ammar@gmail.com", password: "test1234")
+
+art_zero = Article.create(title: "petrol", body: "Loremhhhhdhdhsdahadhasdhasdhdhsadsadsadsad", author_name: "Alex Mandels", photo_url: "https://goo.gl/uDZhbj", user_id: 1)
 
 art_one = Article.create(title:"Why This Volkswagen Beetle Could Be The Perfect EV Classic", body: "15 years ago, the average gearhead would have told you the auto-apocalypse was nearing. “Oil is drying up, the government is out to ruin car culture, and it won’t be long before we’re all zipping around in soulless electric snoozemobiles,” the melodramatics would declare.
 
 But that concern doesn’t seem to be so prevalent today. Perhaps it’s manufacturers like Tesla that have changed the minds of motorists, but it doesn’t seem to be all so doom and gloom now that we’ve been exposed to a few cool electric cars. While I’m a proponent of petrol power and always will be, the idea of daily driving a hybrid or an EV doesn’t seem too threatening so long as we can still have our fun weekenders—but what about combining the two somehow?
 
-While my initial response towards the idea of a rechargeable classic was an unapologetic, “Hell no,” Morgan’s retro electric 3-wheeler admittedly piqued my interest, so perhaps there’s room for an exception—a converted-to-electric classic that’d get the nod of approval from the motoring masses, but what car could pull off such an otherwise blasphemous concept? The Volkswagen Beetle, of course.", author_name: " Andrew Golseth", photo_url: "https://d39a3h63xew422.cloudfront.net/wp-content/uploads/2017/04/25235319/zelectricbeetle-3-2000x1333.jpg")
+While my initial response towards the idea of a rechargeable classic was an unapologetic, “Hell no,” Morgan’s retro electric 3-wheeler admittedly piqued my interest, so perhaps there’s room for an exception—a converted-to-electric classic that’d get the nod of approval from the motoring masses, but what car could pull off such an otherwise blasphemous concept? The Volkswagen Beetle, of course.", author_name: " Andrew Golseth", photo_url: "https://d39a3h63xew422.cloudfront.net/wp-content/uploads/2017/04/25235319/zelectricbeetle-3-2000x1333.jpg", user_id: 2)
 
 art_two = Article.create(title: "Alfa Romeo Bearing Its Name", body: "I have been a good friend of the owner of Villa d’Este for many years, and in 2010, when I left the automotive industry and started freelancing, I thought I could pester him due to the fact that the hotel is the only one I know of that shares its name with a motorcar. The Alfa Romeo 6C 2500SS chassis was in fact used by Carrozzeria Touring for many very beautiful cars, but arguably the pinnacle of that evolutionary chain came about with the model shown at the 1949 Concorso d’Eleganza Villa d’Este, the Touring-built and aptly named 6C 2500 SS Villa d’Este Coupé.
 

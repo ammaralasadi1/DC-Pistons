@@ -20,8 +20,10 @@ ActiveRecord::Schema.define(version: 20170430204923) do
     t.string   "body"
     t.string   "author_name"
     t.string   "photo_url"
+    t.integer  "user_id"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+    t.index ["user_id"], name: "index_articles_on_user_id", using: :btree
   end
 
   create_table "cars", force: :cascade do |t|
@@ -34,8 +36,10 @@ ActiveRecord::Schema.define(version: 20170430204923) do
     t.string   "seller_name"
     t.string   "seller_phone"
     t.string   "photo_url"
+    t.integer  "user_id"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
+    t.index ["user_id"], name: "index_cars_on_user_id", using: :btree
   end
 
   create_table "comments", force: :cascade do |t|
@@ -81,5 +85,4 @@ ActiveRecord::Schema.define(version: 20170430204923) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
   end
 
-  add_foreign_key "comments", "articles"
 end

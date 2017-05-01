@@ -11,9 +11,7 @@
 
 <div class="car-ad-lower">
 
-  <%= link_to 'Show', car, class:"nav-content hvr-fade" %>
-  <%= link_to 'Edit', edit_car_path(car), class: "nav-content hvr-fade" %>
-  <%= link_to 'Delete', car, method: :delete, data: { confirm: 'Are you sure?' }, class: "nav-content hvr-fade"%>
+<%= link_to 'Show', car, class:"nav-content hvr-fade" %>
 
 </div>
 
@@ -22,5 +20,6 @@
 </div>
 
 <br>
-
-<%= link_to 'New Car', new_car_path %>
+<% if current_user %>
+  <%= link_to 'New Car', new_car_path %>
+<% end %>

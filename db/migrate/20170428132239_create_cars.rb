@@ -10,6 +10,7 @@ class CreateCars < ActiveRecord::Migration[5.0]
       t.string :seller_name
       t.string :seller_phone
       t.string :photo_url
+      t.references :user
 
       t.timestamps
     end

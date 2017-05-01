@@ -14,7 +14,7 @@ class CarsController < ApplicationController
 
   # GET /cars/new
   def new
-    @car = Car.new
+    @car = current_user.cars.new
   end
 
   # GET /cars/1/edit
@@ -24,7 +24,7 @@ class CarsController < ApplicationController
   # POST /cars
   # POST /cars.json
   def create
-    @car = Car.new(car_params)
+    @car = current_user.cars.create!(car_params)
 
     respond_to do |format|
       if @car.save
@@ -40,25 +40,25 @@ class CarsController < ApplicationController
   # PATCH/PUT /cars/1
   # PATCH/PUT /cars/1.json
   def update
-    respond_to do |format|
-      if @car.update(car_params)
-        format.html { redirect_to @car, notice: 'Car was successfully updated.' }
-        format.json { render :show, status: :ok, location: @car }
-      else
-        format.html { render :edit }
-        format.json { render json: @car.errors, status: :unprocessable_entity }
-      end
+    @cars = Car.find(params[:id])
+    if @cars.user == current_user
+      @cars.update(car_params)
+    else
+      flash[:alert] = "Only the author of the cars can Update"
     end
+    redirect_to cars_path
   end
 
   # DELETE /cars/1
   # DELETE /cars/1.json
   def destroy
-    @car.destroy
-    respond_to do |format|
-      format.html { redirect_to cars_url, notice: 'Car was successfully destroyed.' }
-      format.json { head :no_content }
+    @cars = Car.find(params[:id])
+    if @cars.user == current_user
+      @cars.destroy
+    else
+      flash[:alert] = "Only the author of the cars can delete"
     end
+    redirect_to cars_path
   end
 
   private

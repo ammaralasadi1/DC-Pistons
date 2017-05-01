@@ -6,12 +6,13 @@ class ArticlesController < ApplicationController
 
   # new
   def new
-    @article = Article.new
+    @article = current_user.articles.create
+
   end
 
   # create
   def create
-    @article = Article.create!(article_params)
+    @article = current_user.articles.create!(article_params)
 
     redirect_to article_path(@article)
   end
@@ -30,17 +31,27 @@ class ArticlesController < ApplicationController
   # update
   def update
     @article = Article.find(params[:id])
-    @article.update(article_params)
+    if @article.user == current_user
+      @article.update(article_params)
+    else
+      flash[:alert] = "Only the author of the article can Update"
+    end
+
 
     redirect_to article_path(@article)
   end
 
   # destroy
   def destroy
-    @article = Article.find(params[:id]).destroy
-
+    @article = Article.find(params[:id])
+    if @article.user == current_user
+      @article.destroy
+    else
+      flash[:alert] = "Only the author of the article can delete"
+    end
     redirect_to articles_path
   end
+
 
   private
   def article_params
