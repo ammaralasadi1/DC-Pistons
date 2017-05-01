@@ -6,7 +6,7 @@ User.destroy_all
 User.create(email:"alasadiammar@gmail.com", password: "test123")
 User.create(email:"alasadi.ammar@gmail.com", password: "test1234")
 
-art_zero = Article.create(title: "petrol", body: "Loremhhhhdhdhsdahadhasdhasdhdhsadsadsadsad", author_name: "Alex Mandels", photo_url: "https://goo.gl/uDZhbj", user_id: 1)
+art_zero = Article.create(title: "petrol", body: "Loremhhhhdhdhsdahadhasdhasdhdhsadsadsadsad", author_name: "Alex Mandels", photo_url: "http://www.classicandperformancecar.com/uploads/cms_article/4701_4800/porsche-959-set-to-fetch-1-3m-at-auction-4741_11762_969X727.jpg", user_id: 1)
 
 art_one = Article.create(title:"Why This Volkswagen Beetle Could Be The Perfect EV Classic", body: "15 years ago, the average gearhead would have told you the auto-apocalypse was nearing. “Oil is drying up, the government is out to ruin car culture, and it won’t be long before we’re all zipping around in soulless electric snoozemobiles,” the melodramatics would declare.
 
