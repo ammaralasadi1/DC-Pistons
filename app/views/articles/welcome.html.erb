@@ -6,48 +6,48 @@
   </head>
   <body>
     <div class="welcome">
-    <div class="welcome-logo">
 
-        <div class="welcome-img">
-          <img src="http://i.imgur.com/0qdjhbR.png"/>
+      <div class="welcome-logo">
+        <img src="http://i.imgur.com/0qdjhbR.png"/>
+      </div>
 
-        </div>
-
-        <div class="welcome-img">
-
-          <img src="http://files1.porsche.com/filestore/image/multimedia/none/rd-2014-porscheclassic-models-roadvehicles-911g-teaser/normal/8144464b-f0f0-11e5-84b6-0019999cd470/porsche-normal.jpg">
-        </div>
-
-        <%@articles.each do |article| %>
-
-        <div class="article-index-photo-P">
-          <%= image_tag article.photo_url, class:"article-index-photo"%>
-          <p class="article-index-p"><%= link_to article.title, article %></p>
-
-        </div>
-
-        <% end %>
-
-
-        <% @cars.each do |car| %>
-
-        <div class="car-ad-upper">
-          <div class="car-ad-img"><%= image_tag car.photo_url%></div>
-          <h1 class="article-show-title"><%= car.title%></h1>
-        </div>
-
-        <div class="car-ad-lower">
-
-          <%= link_to 'Show', car, class:"nav-content hvr-fade" %>
-
-        </div>
-
-        <% end %>
-
-
-
+      <div class="welcome-img">
+        <img src="http://files1.porsche.com/filestore/image/multimedia/none/rd-2014-porscheclassic-models-roadvehicles-911g-teaser/normal/8144464b-f0f0-11e5-84b6-0019999cd470/porsche-normal.jpg">
+      </div>
 
     </div>
 
-  </body>
+    <div class="article-index-container">
+      <%if @articles.count == 0 %>
+      <p>There are no cars in this category</p>
+
+      <%end%>
+
+      <%@articles.each do |article| %>
+
+      <div class="article-index-photo-P">
+        <%= image_tag article.photo_url, class:"article-index-photo"%>
+        <p class="article-index-p"><%= link_to article.title, article %></p>
+
+      </div>
+
+      <% end %>
+
+      <%@articles.each do |article| %>
+
+      <div class="article-index-photo-P">
+        <%= image_tag article.photo_url, class:"article-index-photo"%>
+        <p class="article-index-p"><%= link_to article.title, article %></p>
+
+      </div>
+
+      <% end %>
+
+      <%= link_to "Submit your story", new_article_path, class:"nav-content hvr-fade"%>
+
+    </div>
+
+  </div>
+
+</body>
 </html>

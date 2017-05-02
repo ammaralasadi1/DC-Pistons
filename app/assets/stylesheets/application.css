@@ -284,16 +284,20 @@ th, td {
   margin: 0 auto;
 }
 
-.welcome-img {
+.welcome-logo img {
   margin: 0 auto;
   display: flex;
   justify-content: center;
+  width: 164px;
+  height: 175px;
 }
 
 .welcome{
   width: 100%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
   background-color: #ffffff;
 }
 
