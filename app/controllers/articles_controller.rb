@@ -3,7 +3,8 @@ class ArticlesController < ApplicationController
 #welcome
 
 def welcome
-
+@articles = Article.all
+@cars = Car.all
 end
 
   # index

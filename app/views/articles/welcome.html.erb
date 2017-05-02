@@ -17,6 +17,36 @@
 
           <img src="http://files1.porsche.com/filestore/image/multimedia/none/rd-2014-porscheclassic-models-roadvehicles-911g-teaser/normal/8144464b-f0f0-11e5-84b6-0019999cd470/porsche-normal.jpg">
         </div>
+
+        <%@articles.each do |article| %>
+
+        <div class="article-index-photo-P">
+          <%= image_tag article.photo_url, class:"article-index-photo"%>
+          <p class="article-index-p"><%= link_to article.title, article %></p>
+
+        </div>
+
+        <% end %>
+
+
+        <% @cars.each do |car| %>
+
+        <div class="car-ad-upper">
+          <div class="car-ad-img"><%= image_tag car.photo_url%></div>
+          <h1 class="article-show-title"><%= car.title%></h1>
+        </div>
+
+        <div class="car-ad-lower">
+
+          <%= link_to 'Show', car, class:"nav-content hvr-fade" %>
+
+        </div>
+
+        <% end %>
+
+
+
+
     </div>
 
   </body>
