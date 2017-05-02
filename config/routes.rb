@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root 'articles#index'
+  root 'articles#welcome'
   devise_for :users
   devise_for :installs
   resources :cars

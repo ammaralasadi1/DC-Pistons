@@ -1,4 +1,11 @@
 class ArticlesController < ApplicationController
+
+#welcome
+
+def welcome
+
+end
+
   # index
   def index
     if params[:category].blank?
@@ -39,8 +46,7 @@ class ArticlesController < ApplicationController
     @article = Article.find(params[:id])
   end
 
-
-  # update
+# update
   def update
     @article = Article.find(params[:id])
     @article.category_id = (params[:category_id])

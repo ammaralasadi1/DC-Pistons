@@ -1,11 +1,11 @@
 <h1 class="current_category"><%= params[:category]%></h1>
-
+<div class="article-index-container">
 <%if @articles.count == 0 %>
 <p>There are no cars in this category</p>
 
 <%end%>
 
-<div class="article-index-container">
+
   <%@articles.each do |article| %>
 
   <div class="article-index-photo-P">
@@ -16,6 +16,6 @@
 
   <% end %>
 
-  <%= link_to "Submit your story", new_article_path, class:"nav-content hvr-fade"%>
+<%= link_to "Submit your story", new_article_path, class:"nav-content hvr-fade"%>
 
 </div>
