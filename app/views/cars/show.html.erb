@@ -42,10 +42,10 @@
   </p>
 
 
-<div>
+<div car-show-buttons>
     <%if @car.user == current_user && user_signed_in?%>
     <%= link_to 'Delete', @car, method: :delete, data: { confirm: 'Are you sure?' }, class: "all-buttons hvr-fade"%>
-    
+
     <%= link_to 'Edit', edit_car_path(@car), class: "all-buttons hvr-fade" %>
 
     <%  end %>

@@ -245,7 +245,7 @@ th, td {
   font-weight: 400;
   font-style: normal;
   text-align: left;
-
+  margin-top: 50px;
 }
 
 .ad-title {
@@ -342,6 +342,7 @@ th, td {
 
 .all-buttons {
   font-size: 18px;
+  color: white;
   background-color: black;
   color: white;
   text-align: center;
@@ -356,10 +357,18 @@ th, td {
 }
 
 .comment-container {
-  text-align: center;
+  text-align: left;
+  margin-top: 50px;
 }
 
-
+.comment {
+  background-color: #d15d1f;
+  padding: 10px;
+  border-radius: 5px;
+}
+.car-new-div {
+  text-align: center;
+}
 
 
 /*views for article above*/

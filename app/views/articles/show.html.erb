@@ -17,7 +17,7 @@
   <h3 class="article-show-edit"><%= link_to "Edit Article", edit_article_path(@article) %></h3> -->
 
   <% @article.comments.each do |comment| %>
-  <p class="comment-container"><%= link_to "#{comment.body} by: #{comment.author_name}", article_comment_path(@article, comment), class:"comment"%></p><br>
+  <p class="comment-container"><%= link_to "#{comment.body} By: #{comment.author_name}", article_comment_path(@article, comment), class:"comment"%></p><br>
   <% end %>
   <h3 class="all-buttons hvr-fade"><%= link_to "Write a comment", new_article_comment_path(@article) %></h3>
 
