@@ -1,5 +1,8 @@
 DC Cars and Coffee
-DC Cars and Coffee is a web application and an online magazine where users can publish articles and create ads. The application is built using Ruby on Rails for backend and HTML and CSS3 for frontend intraction. 
+
+By: Ammar Alasadi
+
+A web application and an online magazine where users can publish articles and create ads. The application is built using Ruby on Rails for backend and HTML and CSS3 for frontend intraction. 
 Technologies Used
 Ruby on Rails
 ERB
