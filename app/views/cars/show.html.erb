@@ -1,57 +1,57 @@
 <p id="notice"><%= notice %></p>
 
-
 <div class="car-show">
 
+  <p class="title">
+    <%= @car.title %>
+  </p>
 
-<p class="title">
-<%= @car.title %>
-</p>
-<div class="car-show-phot">
-  <%= image_tag @car.photo_url, class:"for-sale"%>
-</div>
+  <div class="car-info-container">
 
+    <p class="car-info">
+      <%= @car.make %>
+    </p>
 
-<p class="ad">
-<%= @car.body%>
-</p>
+    <p class="car-info">
+      <%= @car.model %>
+    </p>
 
-<p class="car-info">
-<%= @car.make %>
-</p>
+    <p class="car-info">
+      <%= @car.year %>
+    </p>
 
-<p class="car-info">
-<%= @car.model %>
-</p>
+    <p class="car-info">
+      <%= @car.price %>
+    </p>
 
-<p class="car-info">
-  <%= @car.year %>
-</p>
+    <p class="car-info">
+      <%= @car.seller_name %>
+    </p>
 
-<p class="car-info">
-<%= @car.price %>
-</p>
+    <p class="car-info">
+      <%= @car.seller_phone %>
+    </p>
+  </div>
 
-<p class="car-info">
-<%= @car.seller_name %>
-</p>
+  <div class="car-show-phot">
+    <%= image_tag @car.photo_url, class:"for-sale"%>
+  </div>
 
-<p class="car-info">
-<%= @car.seller_phone %>
-</p>
-
-
-
+  <p class="ad">
+    <%= @car.body%>
+  </p>
 
 
 <div>
-<%if @car.user == current_user && user_signed_in?%>
-<%= link_to 'Delete', @car, method: :delete, data: { confirm: 'Are you sure?' }, class: "all-buttons hvr-fade"%> |
-<%= link_to 'Edit', edit_car_path(@car), class: "all-buttons hvr-fade" %> |
-<%  end %>
+    <%if @car.user == current_user && user_signed_in?%>
+    <%= link_to 'Delete', @car, method: :delete, data: { confirm: 'Are you sure?' }, class: "all-buttons hvr-fade"%>
+    
+    <%= link_to 'Edit', edit_car_path(@car), class: "all-buttons hvr-fade" %>
 
-<%= link_to 'Back', cars_path, class:"all-buttons hvr-fade" %>
+    <%  end %>
 
-</div>
+    <%= link_to 'Back', cars_path, class:"all-buttons hvr-fade" %>
+
+  </div>
 
 </div>

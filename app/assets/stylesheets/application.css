@@ -67,14 +67,14 @@ a {
 }
 
 
-.article-show-p {
+.article-show-p{
   text-align: center;
-  width: 45%;
-  font-family: "Lato";
-  letter-spacing: .02em;
-  color: #392f2c;
-  font-size: 1.5em;
-  text-align: justify;
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  text-align: left;
+  padding-top: 57px;
+
 }
 
 .article-show-time, .by {
@@ -181,8 +181,7 @@ a:link {
 }
 
 .article-show-photo {
-  width: 50%;
-  height: 50%;
+width: 80%;
   margin: 0 auto;
   -webkit-box-shadow: 3px -1px 23px 0px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 3px -1px 23px 0px rgba(0, 0, 0, 0.75);
@@ -224,6 +223,7 @@ th, td {
 
 .article-phot {
   display: flex;
+  flex-direction: column;
 }
 
 .car-show {
@@ -240,9 +240,12 @@ th, td {
 .ad {
   width: 70%;
   margin: 0 auto;
-  text-align: justify;
-  font-size: 2em;
-  margin-top: 30px;
+  text-align: center;
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  text-align: left;
+
 }
 
 .ad-title {
@@ -321,7 +324,16 @@ th, td {
 }
 
 .car-info {
-  font-size: 24px;
+  padding:40px;
+  font-family: lato;
+  font-weight: 300;
+  color: red;
+  display: inline-block;
+  margin: 0 auto;
+}
+
+.car-info-container {
+  text-align: center;
 }
 
 .show-back{
@@ -329,6 +341,25 @@ th, td {
 }
 
 .all-buttons {
+  font-size: 18px;
+  background-color: black;
+  color: white;
+  text-align: center;
+  margin-top: 50px;
+  margin-right: 20px;
+  font-size: 24px;;
+  font-style: normal;
+  font-variant: small-caps;
+  font-weight: bold;
+  border-radius: 20px;
+  padding: 10px;
+}
+
+.comment-container {
   text-align: center;
 }
+
+
+
+
 /*views for article above*/
