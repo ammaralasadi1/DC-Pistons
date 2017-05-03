@@ -8,11 +8,7 @@ a {
   cursor: auto;
 }
 
-a {
-  text-decoration: inherit;
-  color: inherit;
-  cursor: auto;
-}
+
 
 .nav-content, .back {
   text-decoration: none;
@@ -25,7 +21,7 @@ a {
 	font-variant: small-caps;
 	font-weight: bold;
 	line-height: 14px;
-  background-color: black;
+
   /*margin: 20px;*/
 }
 
@@ -37,12 +33,12 @@ a {
 
 .navbar {
   width: 100%;
-  height: 44px;
+  height: 64px;
   display: flex;
   justify-content: center;
   align-items: center;
   justify-content: center;
-  background-color: rgb(41, 10, 13);
+  background-color: black;
 
 }
 
@@ -65,13 +61,11 @@ a {
 
 .title {
   text-align: center;
-  font-size: 2em;
-  font-family: 'Dosis', sans-serif;
+  font-size: 40px;
+  font-family: 'Oswald', sans-serif;
+  font-weight: lighter;
 }
 
-.article-show-title {
-  text-align: center;
-}
 
 .article-show-p {
   text-align: center;
@@ -166,7 +160,7 @@ form {
 
 .hvr-fade:hover, .hvr-fade:focus, .hvr-fade:active {
   /*background-color: #2098D1;*/
-  color: #cac3c3;
+  color: red;
 }
 
 a:link {
@@ -304,15 +298,15 @@ th, td {
 }
 
 .nav-logo {
-  width: 122px;
-padding-right: 40px;
+  width: 170px;
+  padding-right: 40px;
 }
 
 .submit {
   text-align: center;
 }
 
-.category-notice, .current_category{
+.category-notice{
   text-align: center;
 }
 .notice, .alert, .devise-h2 {
@@ -331,6 +325,10 @@ padding-right: 40px;
 }
 
 .show-back{
+  text-align: center;
+}
+
+.all-buttons {
   text-align: center;
 }
 /*views for article above*/
