@@ -1,4 +1,9 @@
 
-<h2><%= @comment.body %><h2>
-  <h2><%= @comment.author_name %><h2>
-<h3 ><%= link_to "Edit comment", edit_article_comment_path(@comment.article, @comment), class:"all-buttons hvr-fade" %></h3>
+
+
+<div class="comment-container-show">
+
+  <h2 class="title"><%= @comment.body %><h2>
+    <h2><%= @comment.author_name %><h2>
+      <h3 ><%= link_to "Edit comment", edit_article_comment_path(@comment.article, @comment), class:"all-buttons hvr-fade white" %></h3>
+</div>

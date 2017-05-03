@@ -369,6 +369,14 @@ th, td {
 .car-new-div {
   text-align: center;
 }
+.comment-container-show{
+  text-align: center;
+}
+.article-show-p .commenter {
+  text-align:
+}
 
-
+.white {
+  color: white;
+}
 /*views for article above*/

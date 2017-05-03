@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>DC-Pistons</title>
+    <title>DC Cars and Coffee</title>
     <!-- <link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShXSzccjYqq9xrt_Xdw6MRhzarUanr-18tMiS7jJuroskH92pX"> -->
     <%= csrf_meta_tags %>
     <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
@@ -17,6 +17,7 @@
     <nav class="navbar">
       <img src="http://i.imgur.com/9yoJJg7.png" class="nav-logo"/>
       <a href="#"></a>
+      <a class="nav-content hvr-fade" <%= link_to "Home", root_path%></a>
       <a class="nav-content hvr-fade" <%= link_to "Cars for slae", cars_path%></a>
 
   <a class="nav-content hvr-fade" <%= link_to "Articles", articles_path%></a>

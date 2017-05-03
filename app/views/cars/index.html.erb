@@ -1,11 +1,11 @@
 <div class="car-ad-wraper">
-  <h1 class="title">For Sale</h1>
+  <h1 class="title">Classics for sale</h1>
 
   <% @cars.each do |car| %>
 
   <div class="car-ad-upper">
     <div class="car-ad-img"><%= image_tag car.photo_url%></div>
-    <h1 class="article-show-title"><%= car.title%></h1>
+    <h1 class="title"><%= car.title%></h1>
   </div>
 
   <div class="car-ad-lower">
