@@ -14,10 +14,8 @@ a {
   cursor: auto;
 }
 
-.nav-content {
+.nav-content, .back {
   text-decoration: none;
-  /*padding: 20px;*/
-  /*font-family: 'Oswald', sans-serif;*/
   font-size: 14px;
   color: white;
   margin-right: 70px;
@@ -27,6 +25,7 @@ a {
 	font-variant: small-caps;
 	font-weight: bold;
 	line-height: 14px;
+  background-color: black;
   /*margin: 20px;*/
 }
 
@@ -49,17 +48,19 @@ a {
 
 
 .article-index-container {
+  width: 100%;
   display: flex;
-  text-align: center;
   flex-wrap: wrap;
-  margin: 0 auto;
   justify-content: center;
-  height: 500px;
 }
 
-.article-index-photo-P {
+.index-photo{
   padding: 7px;
   height: 500px;
+  width: 400px;
+  margin: 0px;
+
+
 }
 
 .title {
@@ -98,7 +99,7 @@ a {
   text-align: center;
 }
 
-.form-row {
+.form-row, .control-label .email .required {
   margin-bottom: 10px;
 }
 
@@ -106,7 +107,7 @@ a {
   padding: 10px;
 }
 
-.form-row input {
+.form-row input{
   width: 100%;
   padding: 10px;
 }
@@ -116,7 +117,7 @@ a {
   height: 100px;
 }
 
-.form-row input[type=submit], .back, .article-show-edit, .article-show-write-comment {
+.form-row input[type=submit], .back, .article-show-edit  {
   color: #fff;
   background-color: #337ab7;
   border-color: #2e6da4;
@@ -174,7 +175,7 @@ a:link {
   color: inherit;
 }
 
-.article-index-p {
+.article-title{
   font-family: 'Oswald', sans-serif;
   font-size: 22px;
   font-stretch: expanded;
@@ -182,6 +183,7 @@ a:link {
   width: 400px;
   height: 50px;
   font-weight: 100;
+  text-align: center;
 }
 
 .article-show-photo {
@@ -306,4 +308,31 @@ th, td {
 padding-right: 40px;
 }
 
+.submit {
+  text-align: center;
+}
+
+.category-notice, .current_category{
+  text-align: center;
+}
+.notice, .alert, .devise-h2 {
+  text-align: center;
+}
+.simple_form .new_user {
+  text-align: center;
+}
+
+.sign-up-sign-in {
+  text-align: center;
+}
+
+.car-info {
+  font-size: 24px;
+}
+
+.
+
+.show-back{
+  text-align: center;
+}
 /*views for article above*/

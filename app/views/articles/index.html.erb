@@ -1,21 +1,25 @@
-<h1 class="current_category"><%= params[:category]%></h1>
-<div class="article-index-container">
+<h1 class="title"><%= params[:category]%></h1>
+
+
 <%if @articles.count == 0 %>
 <p>There are no cars in this category</p>
 
 <%end%>
 
-
+<div class="article-index-container">
   <%@articles.each do |article| %>
-
-  <div class="article-index-photo-P">
+  <div class="index-photo">
     <%= image_tag article.photo_url, class:"article-index-photo"%>
-    <p class="article-index-p"><%= link_to article.title, article %></p>
-
+    <p class="article-title"><%= link_to article.title, article %></p>
   </div>
-
   <% end %>
-
-<%= link_to "Submit your story", new_article_path, class:"nav-content hvr-fade"%>
-
 </div>
+
+<%if user_signed_in?%>
+
+<div class="submit">
+
+  <%= link_to "Submit your story", new_article_path, class:"nav-content hvr-fade"%>
+</div>
+
+<%end%>

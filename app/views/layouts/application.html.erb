@@ -11,11 +11,8 @@
 
   <body>
 
-    <!-- <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
-    <div class="logo-img">
-      <img src="https://petrolicious.com/wp-content/themes/petrolicious/images/logo.svg">
-    </div> -->
+
+
 
     <nav class="navbar">
       <img src="http://i.imgur.com/9yoJJg7.png" class="nav-logo"/>
@@ -31,14 +28,6 @@
 
   <%end%>
 
-  <%Category.all.each do |category|%>
-  <a>
-    <%=link_to category.name, cars_path(category: category.name), class: "nav-content hvr-fade" %>
-  </a>
-
-  <%end%>
-
-
 </a>
 <a class="nav-content hvr-fade" <%= link_to "Sign Up", new_user_registration_path%></a>
 
@@ -49,6 +38,9 @@
 <a class="nav-content hvr-fade" <%= link_to "Log In", new_user_session_path%></a>
 <%end%>
 </nav>
+
+<p class="notice"><%= notice %></p>
+<p class="alert"><%= alert %></p>
 
 <%= yield %>
 
