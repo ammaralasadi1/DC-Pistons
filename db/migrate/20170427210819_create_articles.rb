@@ -5,8 +5,8 @@ class CreateArticles < ActiveRecord::Migration[5.0]
       t.string :body
       t.string :author_name
       t.string :photo_url
-      t.references :user
-
+      t.references :user, foreign_key: true
+      # It is best practice to include the foreign_key constraint on references (makes queries faster)
       t.timestamps
     end
   end

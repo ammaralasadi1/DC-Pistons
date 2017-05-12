@@ -1,5 +1,7 @@
 class DeviseCreateInstalls < ActiveRecord::Migration[5.0]
   def change
+    # I'm not sure what this :installs table (and the associated model represents).
+    # # Is it still being used in the app
     create_table :installs do |t|
       ## Database authenticatable
       t.string :email,              null: false, default: ""
