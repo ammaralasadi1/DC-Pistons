@@ -1,13 +1,13 @@
-DC Cars and Coffee
+# DC Cars and Coffee
+*By: Ammar Alasadi*
 
-By: Ammar Alasadi
+A web application and an online magazine where users can publish articles and create ads. The application is built using Ruby on Rails for backend and HTML and CSS3 for frontend intraction.
 
-A web application and an online magazine where users can publish articles and create ads. The application is built using Ruby on Rails for backend and HTML and CSS3 for frontend intraction. 
-Technologies Used
-Ruby on Rails
-ERB
-HTML
-CSS3
+## Technologies Used
+- Ruby on Rails
+- ERB
+- HTML
+- CSS3
 
 
 Approach
@@ -35,7 +35,7 @@ User can create an account.
 User can create and edit articles belongs so specific user
 User can create and edit ads  belongs so specific user
 
-Gold Level 
+Gold Level
 
 User can assign articles to a category
 User can view articles by categories

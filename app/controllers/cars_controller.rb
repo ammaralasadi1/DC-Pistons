@@ -1,5 +1,19 @@
 class CarsController < ApplicationController
   before_action :set_car, only: [:show, :edit, :update, :destroy]
+  # While I see that you are trying to use before_action to make your code more DRY,
+  # for readability, I would just repeat the
+  #
+  #   @car = Car.find(params[:id])
+  #
+  # code block in each one of those methods
+
+
+  # Also, it looks like you used rails g controller to make this file. While that is
+  # acceptable, you need to go clean out all of the unneccessary code comments /
+  # code that it generated as well (such as the render json methods, unused .coffee
+  # files in javascripts, and the unused .json_builder files in views). Also make sure
+  # you read through all of your code and understand anything that the generator set up
+  # for you.
 
   # GET /cars
   # GET /cars.json
