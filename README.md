@@ -2,11 +2,12 @@ DC Cars and Coffee
 
 By: Ammar Alasadi
 
-A web application and an online magazine where users can publish articles and create ads. The application is built using Ruby on Rails for backend and HTML and CSS3 for frontend intraction. 
-Technologies Used
+A web application and an online magazine where users can publish articles and create ads. The application is built using Ruby on Rails.
+
+Technologies Used:
 Ruby on Rails
 ERB
-HTML
+HTML5
 CSS3
 
 
