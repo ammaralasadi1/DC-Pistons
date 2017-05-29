@@ -5,10 +5,10 @@ By: Ammar Alasadi
 A web application and an online magazine where users can publish articles and create ads. The application is built using Ruby on Rails.
 
 Technologies Used:
-Ruby on Rails
-ERB
-HTML5
-CSS3
+- Ruby on Rails
+- ERB
+- HTML5
+- CSS3
 
 
 Approach
